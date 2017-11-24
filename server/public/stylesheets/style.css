@@ -6,3 +6,22 @@ body {
 a {
   color: #00B7FF;
 }
+
+.serverNavbar li{
+  border-left: solid 2px rgb(19, 17, 17); 
+  padding: 5px
+}
+.serverNavbar li:last-child{
+  border-right: solid 2px rgb(24, 23, 22); 
+}  
+
+@media (max-width: 992px){
+  .serverNavbar li{
+    border-left:solid 0px;
+    
+  }
+  .serverNavbar li:last-child{
+    border-right:solid 0px;    
+  }
+}
+ 
