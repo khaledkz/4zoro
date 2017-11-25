@@ -17,7 +17,10 @@ router.post('/add',(req,res)=>{
 })
 
 router.get('/edit', (req, res, next)=> {
-  res.render('admin-edit-category');
+  let callback=(data)=>{
+    res.render('admin-edit-category',{data:data});    
+  }
+  addCategory.findCategory({},callback);
 });
 
 module.exports = router;
