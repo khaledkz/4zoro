@@ -1,11 +1,12 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 const addCategory=require('../../../dbClient/category')
 
 /* GET home page. */
 router.get('/add', (req, res, next)=> {
   res.render('admin-add-category');
 });
+
 router.post('/add',(req,res)=>{
   const query=req.body;
   callback=()=>{
@@ -18,4 +19,5 @@ router.post('/add',(req,res)=>{
 router.get('/edit', (req, res, next)=> {
   res.render('admin-edit-category');
 });
+
 module.exports = router;
