@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const addCategory=require('../../../dbClient/category')
+const categoryDB=require('../../../dbClient/category')
 
 /* GET home page. */
 router.get('/add', (req, res, next)=> {
@@ -12,7 +12,7 @@ router.post('/add',(req,res)=>{
   callback=()=>{
     res.redirect('/')
   }
-  addCategory.addCategory(query,callback)
+  categoryDB.addCategory(query,callback)
   res.redirect('/')
 })
 
@@ -20,7 +20,7 @@ router.get('/edit', (req, res, next)=> {
   let callback=(data)=>{
     res.render('admin-edit-category',{data:data});    
   }
-  addCategory.findCategory({},callback);
+  categoryDB.findCategory({},callback);
 });
 
 module.exports = router;
