@@ -1,5 +1,5 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 const addArticle=require('../../../dbClient/article')
 /* GET home page. */
 router.get('/add', (req, res, next)=> {
@@ -15,6 +15,12 @@ router.post('/add',(req,res)=>{
  })
 
 router.get('/edit', (req, res, next)=> {
-  res.render('admin-edit-article');
+  callback=(data)=>{
+    console.log(data)
+    res.render('admin-edit-article',{
+      data:data
+    });
+  }
+ addArticle.findArticle({},callback);
 });
 module.exports = router;
