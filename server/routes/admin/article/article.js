@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const addArticle=require('../../../dbClient/article')
+const articleDB=require('../../../dbClient/article')
 /* GET home page. */
 router.get('/add', (req, res, next)=> {
   res.render('admin-add-article');
@@ -11,7 +11,7 @@ router.post('/add',(req,res)=>{
    callback=()=>{
      res.redirect('/')
    }
-  addArticle.addArticle(query,callback)
+   articleDB.addArticle(query,callback)
  })
 
 router.get('/edit', (req, res, next)=> {
@@ -21,6 +21,31 @@ router.get('/edit', (req, res, next)=> {
       data:data
     });
   }
- addArticle.findArticle({},callback);
+  articleDB.findArticle({},callback);
 });
+
+router.get('/edit/:articleId',(req,res)=>{
+  const {articleId}=req.params;
+
+  callback=(data)=>{
+      console.log(data)
+      res.render('edit-sigle-article',{
+        data:data
+      });
+    }
+    articleDB.findById(articleId,callback);
+})
+
+router.post('/edit/:articleId',(req,res)=>{
+  let query=req.params;
+  const {articleId}=req.params;
+
+  callback=(data)=>{
+      console.log(data)
+      res.render('edit-sigle-article',{
+        data:data
+      });
+    }
+    articleDB.updateOne(articleId,query,callback);
+})
 module.exports = router;

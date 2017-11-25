@@ -8,5 +8,8 @@ const addArticle=(query,callback)=>{
 const findArticle=(query,callback)=>{
     Article.find(query).then(callback);
 }
+const findById=(id,callback)=>{
+    Article.findById(id).then(callback);
+}
 
-module.exports={addArticle,findArticle};
+module.exports={addArticle,findArticle,findById};
