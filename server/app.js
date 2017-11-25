@@ -8,6 +8,8 @@ const bodyParser = require('body-parser');
 const index = require('./routes/index');
 const article = require('./routes/admin/article/article');
 const category = require('./routes/admin/category/category');
+const articleApi=require('./routes/api/articlesApi')
+const categoryApi=require('./routes/api/categoriesApi')
 
 const app = express();
 
@@ -26,6 +28,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/admin/articles',article)
 app.use('/admin/categories',category)
+app.use('/api/articles', articleApi);
+app.use('/api/categories', categoryApi);
+
+
 
 // catch 404 and forward to error handler
 app.use((req, res, next)=> {
