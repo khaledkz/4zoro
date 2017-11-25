@@ -1,7 +1,7 @@
 require('./connection')
 const Article= require('../models/Category');
 
-const addArticle=(query,callback)=>{
+const addCategory=(query,callback)=>{
     Article.create(query).then(callback);
 }
 
