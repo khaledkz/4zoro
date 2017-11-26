@@ -9,7 +9,7 @@ router.get('/add', (req, res, next)=> {
 router.post('/add',(req,res)=>{
    const query=req.body;
    callback=()=>{
-     res.redirect('/')
+     res.redirect('/admin/articles/edit')
    }
    articleDB.addArticle(query,callback)
  })
@@ -26,7 +26,7 @@ router.get('/edit', (req, res, next)=> {
 router.get('/edit/delete/:articleId', (req, res, next)=> {
   let {articleId}=req.params;
   callback=()=>{
-    res.redirect('/')
+    res.redirect('/admin/articles/edit')
   }
  articleDB.removeArticle(articleId,callback)
 });
@@ -50,7 +50,7 @@ router.post('/edit/:articleId',(req,res)=>{
   const {articleId}=req.params;
 
   callback=()=>{
-       res.redirect('/');
+       res.redirect('/admin/articles/edit');
     }
     articleDB.updateOne(articleId,query,true,callback);
 })

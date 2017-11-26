@@ -10,11 +10,10 @@ router.get('/add', (req, res, next)=> {
 router.post('/add',(req,res)=>{
   const query=req.body;
   callback=()=>{
-    res.redirect('/')
+    res.redirect('/admin/categories/edit')
   }
   categoryDB.addCategory(query,callback)
-  res.redirect('/')
-})
+ })
 
 router.get('/edit', (req, res, next)=> {
   let callback=(data)=>{
@@ -42,7 +41,7 @@ router.post('/edit/:categoryId',(req,res,next)=>{
   const queryUpdated=req.body;
 
   callback=()=>{
-    res.redirect('/');
+    res.redirect('/admin/categories/edit');
   }
  categoryDB.updateOne(categoryId,queryUpdated,true,callback)
 });
@@ -50,7 +49,7 @@ router.post('/edit/:categoryId',(req,res,next)=>{
 router.get('/edit/delete/:categoryId',(req,res,next)=>{
   const {categoryId}=req.params; 
    callback=()=>{
-    res.redirect('/');
+    res.redirect('/admin/categories/edit');
   }
   categoryDB.removeCategory(categoryId,callback)
 });  
