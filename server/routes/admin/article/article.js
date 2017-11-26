@@ -37,15 +37,13 @@ router.get('/edit/:articleId',(req,res)=>{
 })
 
 router.post('/edit/:articleId',(req,res)=>{
-  let query=req.params;
+  let query=req.body;
+   
   const {articleId}=req.params;
 
-  callback=(data)=>{
-      console.log(data)
-      res.render('edit-sigle-article',{
-        data:data
-      });
+  callback=()=>{
+       res.redirect('/');
     }
-    articleDB.updateOne(articleId,query,callback);
+    articleDB.updateOne(articleId,query,true,callback);
 })
 module.exports = router;

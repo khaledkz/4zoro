@@ -8,6 +8,34 @@
             <input class="form-control" value={{data.title}} type="text" name="title" id="example-text-input">
         </div>
     </div>
+    
+    {{#if data.visible}}
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="visible" id="optionsRadios1" value="true" checked>
+        <h3>visible</h3>
+      </label>
+    </div>
+    <div class="form-check">
+    <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="visible" id="optionsRadios2" value="false" >
+        <h3>Hide</h3> 
+       </label>
+    </div>
+     {{else}}
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="visible" id="optionsRadios1" value="true">
+        <h3>visible</h3>
+      </label>
+    </div>
+    <div class="form-check">
+    <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="visible" id="optionsRadios2" value="false" checked>
+        <h3>Hide</h3> 
+       </label>
+    </div>
+    {{/if}}
 
     <div class="form-group has-success">
         <label class="text-success">
