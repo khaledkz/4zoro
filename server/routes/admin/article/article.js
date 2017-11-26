@@ -16,7 +16,6 @@ router.post('/add',(req,res)=>{
 
 router.get('/edit', (req, res, next)=> {
   callback=(data)=>{
-    console.log(data)
     res.render('admin-edit-article',{
       data:data
     });

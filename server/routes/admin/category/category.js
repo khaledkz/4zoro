@@ -23,4 +23,28 @@ router.get('/edit', (req, res, next)=> {
   categoryDB.findCategory({},callback);
 });
 
+router.get('/edit/:categoryId', (req, res, next)=> {
+
+let {categoryId}=req.params;  
+ 
+ callback=(data)=>{
+  console.log(data)
+  res.render('edit-single-category',{
+    data:data
+  });
+}
+ categoryDB.findById(categoryId,callback);
+
+});
+
+router.post('/edit/:categoryId',(req,res,next)=>{
+  const {categoryId}=req.params;  
+  const queryUpdated=req.body;
+
+  callback=()=>{
+    res.redirect('/');
+  }
+ categoryDB.updateOne(categoryId,queryUpdated,true,callback)
+});
+
 module.exports = router;

@@ -4,7 +4,11 @@ const {Schema}= mongoose;
 const schema=new Schema({
     title:String,
     shortDescription:String,
-    description:String
+    description:String,
+    visible:{
+        type:Boolean,
+        default:true
+    }
 });
 
 const Category= mongoose.model('zorocategory',schema);
