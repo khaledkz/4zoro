@@ -1,6 +1,6 @@
 require('./connection')
 const Category= require('../models/Category');
-const {ObjectId} = require('mongoose');
+const ObjectId = require('mongodb').ObjectID;
 
 const addCategory=(query,callback)=>{
     Category.create(query).then(callback);

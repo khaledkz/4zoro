@@ -8,6 +8,6 @@ router.get('/',(req,res)=>{
         console.log(data)
         res.json(data);
       }
-      categoryDB.findCategory({},callback);
+      categoryDB.findCategory({visible:true},callback);
 })
 module.exports = router;

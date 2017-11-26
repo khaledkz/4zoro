@@ -1,6 +1,6 @@
 require('./connection')
 const Article= require('../models/Article');
-const {ObjectId} = require('mongoose');
+const ObjectId = require('mongodb').ObjectID;
 
 const addArticle=(query,callback)=>{
     Article.create(query).then(callback);
