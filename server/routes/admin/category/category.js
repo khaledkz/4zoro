@@ -49,8 +49,7 @@ router.post('/edit/:categoryId',(req,res,next)=>{
 
 router.get('/edit/delete/:categoryId',(req,res,next)=>{
   const {categoryId}=req.params; 
-  console.log('wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww') 
-  callback=()=>{
+   callback=()=>{
     res.redirect('/');
   }
   categoryDB.removeCategory(categoryId,callback)
