@@ -5,6 +5,8 @@ const schema=new Schema({
     title:String,
     shortDescription:String,
     description:String,
+    icon:String,
+    date:String,
     visible:{
         type:Boolean,
         default:true
