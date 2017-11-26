@@ -23,6 +23,15 @@ router.get('/edit', (req, res, next)=> {
   articleDB.findArticle({},callback);
 });
 
+router.get('/edit/delete/:articleId', (req, res, next)=> {
+  let {articleId}=req.params;
+  callback=()=>{
+    res.redirect('/')
+  }
+ articleDB.removeArticle(articleId,callback)
+});
+
+
 router.get('/edit/:articleId',(req,res)=>{
   const {articleId}=req.params;
 
