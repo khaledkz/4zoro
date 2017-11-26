@@ -15,5 +15,9 @@ const findById=(id,callback)=>{
 const updateOne=(articleId,query,upsertOption,sucessCallBack)=>{
     Article.update({ "_id": ObjectId(articleId) }, query, { upsert: upsertOption }, sucessCallBack);
 }
+const removeArticle=(articleId,callback)=>{
+    Article.remove({ "_id": ObjectId(articleId) },callback)
+}
+ 
 
-module.exports={addArticle,findArticle,findById,updateOne};
+module.exports={addArticle,findArticle,findById,updateOne,removeArticle};
