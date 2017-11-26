@@ -14,4 +14,7 @@ const findById=(id,callback)=>{
 const updateOne=(CategoryId,queryupdated,upsertOption,sucessCallBack)=>{
     Category.update({ "_id": ObjectId(CategoryId) }, queryupdated, { upsert: upsertOption }, sucessCallBack);
 }
-module.exports= {addCategory,findCategory,updateOne,findById};
+const removeCategory=(categoryId,callback)=>{
+    Category.remove({ "_id": ObjectId(categoryId) },callback)
+}
+module.exports= {addCategory,findCategory,updateOne,findById,removeCategory};
