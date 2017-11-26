@@ -1,10 +1,28 @@
-{{#each data}}
-        <div >
-        <a href="edit/{{this._id}}">
-        <h1>Title: {{this.title}}.</h1>
-        <h1>FullContent: {{this.fullContent}}.</h1></a>
-       <a href="edit/delete/{{this._id}}"> <button>Delete</button> </a>
+<table class="table table-inverse mt-5">
+        <thead>
+                <tr>
+                        <th>#</th>
+                        <th>Title</th>
+                        <th>Content</th>
+                        <th>Visible</th>
+                        <th>Update</th>
+                        <th>Delete</th>
 
-        </div>
-       <hr> 
-{{/each}}
+                </tr>
+        </thead>
+        <tbody>
+
+                {{#each data}}
+                <tr>
+                        <td>1</td>
+                        <td>{{this.title}}</td>
+                        <td>{{this.fullContent}}</td>
+                         <td>{{this.visible}}</td>
+                        <td><a href="edit/{{this._id}}"><button class="btn btn-success">Update</button></a></td>
+                        <td><a href="edit/delete/{{this._id}}"><button class="btn btn-danger">Delete</button></a></td>
+
+                </tr>
+                {{/each}}
+
+        </tbody>
+</table>
