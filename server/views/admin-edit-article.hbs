@@ -1,6 +1,8 @@
 {{#each data}}
+        <div >
+        <a href="/admin/articles/edit/{{this._id}}">
         <h1>Title: {{this.title}}.</h1>
-        <h1>FullContent: {{this.fullContent}}.</h1>
-       
+        <h1>FullContent: {{this.fullContent}}.</h1></a>
+        </div>
        <hr> 
 {{/each}}

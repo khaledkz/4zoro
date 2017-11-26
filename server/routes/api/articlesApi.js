@@ -8,6 +8,6 @@ router.get('/',(req,res)=>{
         console.log(data)
         res.json(data);
       }
-      articleDB.findArticle({},callback);
+      articleDB.findArticle({visible:true},callback);
 })
 module.exports = router;
