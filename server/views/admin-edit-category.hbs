@@ -1,7 +1,10 @@
 {{#each data}}
-
+        <div>
+        <a href="edit/{{this._id}}">
         <h2>Title:{{this.title}}</h2>
         <h2>brief:{{this.shortDescription}}</h2>
         <h2>Description:{{this.description}}</h2>
+        </a>
+        <div>
     <hr>
 {{/each}}
