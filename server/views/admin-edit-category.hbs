@@ -12,6 +12,7 @@
         </thead>
         <tbody>
                 {{#each data}}
+                {{#if this.visible}}
                 <tr>
                         <td class="text-center align-middle"><h4>1</h4></td>
                         <td class="text-center align-middle"><h4>{{this.title}}</h4></td>
@@ -25,11 +26,31 @@
                         </td>
                         <td class="text-center align-middle">
                                 <a href="edit/delete/{{this._id}}">
+                                        <button class="btn btn-info"><h4>Delete</h4></button>
+                                </a>
+                        </td>
+
+                </tr>
+                {{else}}
+<tr>
+                        <td class="text-center align-middle"><h4>1</h4></td>
+                        <td class="text-center align-middle"><h4><strike>{{this.title}}</strike></h4></td>
+                        <td class="text-center align-middle"><h4><strike>{{this.shortDescription}}</strike></h4></td>
+                        <td class="text-center align-middle"><h4>{{this.visible}}</h4></td>
+                        <td class="text-center align-middle">
+                         
+                                <a href="edit/{{this._id}}">
+                                        <button class="btn btn-danger"><h4>Update</h4></button>
+                                </a>
+                        </td>
+                        <td class="text-center align-middle">
+                                <a href="edit/delete/{{this._id}}">
                                         <button class="btn btn-danger"><h4>Delete</h4></button>
                                 </a>
                         </td>
 
                 </tr>
+                {{/if}}
                 {{/each}}
         </tbody>
 </table>
