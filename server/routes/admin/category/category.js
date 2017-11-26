@@ -1,56 +1,64 @@
 const express = require('express');
 const router = express.Router();
-const categoryDB=require('../../../dbClient/category')
+const categoryDB = require('../../../dbClient/category')
 
 /* GET home page. */
-router.get('/add', (req, res, next)=> {
+router.get('/add', (req, res, next) => {
   res.render('admin-add-category');
 });
 
-router.post('/add',(req,res)=>{
-  const query=req.body;
-  callback=()=>{
+router.post('/add', (req, res) => {
+  const query = req.body;
+  callback = () => {
     res.redirect('/admin/categories/edit')
   }
-  categoryDB.addCategory(query,callback)
- })
+  categoryDB.addCategory(query, callback)
+})
 
-router.get('/edit', (req, res, next)=> {
-  let callback=(data)=>{
-    res.render('admin-edit-category',{data:data});    
+router.get('/edit', (req, res, next) => {
+  let callback = (data) => {
+    data.map((x) => {
+      let xWidth = x.shortDescription.length;
+      if (xWidth > 90) {
+        x.shortDescription = x.shortDescription.slice(0, 90) + " ...";
+      } else {
+        x.shortDescription = x.shortDescription.slice(0, 90);
+      }
+    })
+    res.render('admin-edit-category', { data: data });
   }
-  categoryDB.findCategory({},callback);
+  categoryDB.findCategory({}, callback);
 });
 
-router.get('/edit/:categoryId', (req, res, next)=> {
+router.get('/edit/:categoryId', (req, res, next) => {
 
-let {categoryId}=req.params;  
- 
- callback=(data)=>{
-  console.log(data)
-  res.render('edit-single-category',{
-    data:data
-  });
-}
- categoryDB.findById(categoryId,callback);
+  let { categoryId } = req.params;
+
+  callback = (data) => {
+    console.log(data)
+    res.render('edit-single-category', {
+      data: data
+    });
+  }
+  categoryDB.findById(categoryId, callback);
 
 });
 
-router.post('/edit/:categoryId',(req,res,next)=>{
-  const {categoryId}=req.params;  
-  const queryUpdated=req.body;
+router.post('/edit/:categoryId', (req, res, next) => {
+  const { categoryId } = req.params;
+  const queryUpdated = req.body;
 
-  callback=()=>{
+  callback = () => {
     res.redirect('/admin/categories/edit');
   }
- categoryDB.updateOne(categoryId,queryUpdated,true,callback)
+  categoryDB.updateOne(categoryId, queryUpdated, true, callback)
 });
 
-router.get('/edit/delete/:categoryId',(req,res,next)=>{
-  const {categoryId}=req.params; 
-   callback=()=>{
+router.get('/edit/delete/:categoryId', (req, res, next) => {
+  const { categoryId } = req.params;
+  callback = () => {
     res.redirect('/admin/categories/edit');
   }
-  categoryDB.removeCategory(categoryId,callback)
-});  
+  categoryDB.removeCategory(categoryId, callback)
+});
 module.exports = router;
