@@ -73,7 +73,7 @@ router.get('/edit/:articleId',(req,res)=>{
 
 router.post('/edit/:articleId',(req,res)=>{
   let query=req.body;
-  console.log(data); 
+  console.log(query); 
   
   const {articleId}=req.params;
 
