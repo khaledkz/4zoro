@@ -33,20 +33,37 @@ router.get('/edit', (req, res, next)=> {
 });
 
 router.get('/edit/delete/:articleId', (req, res, next)=> {
+
   let {articleId}=req.params;
-  callback=()=>{
+
+callback=(data)=>{
+   res.render('delete-single-article',{
+    data:data
+  });
+}
+articleDB.findById(articleId,callback);
+
+});
+router.post('/edit/delete/:articleId',(req,res,next)=>{
+  let {articleId}=req.params;  
+   let title=req.body.title;
+  let ensureTitle=req.body.ensureTitle;
+  if(title==ensureTitle){
+   callback=()=>{
     res.redirect('/admin/articles/edit')
   }
- articleDB.removeArticle(articleId,callback)
-});
+   articleDB.removeArticle(articleId,callback)
+  }else{
+    res.render('sorry-wrong-info')     
+  }
+})
 
 
 router.get('/edit/:articleId',(req,res)=>{
   const {articleId}=req.params;
 
   callback=(data)=>{
-      console.log(data)
-      res.render('edit-sigle-article',{
+       res.render('edit-sigle-article',{
         data:data
       });
     }
