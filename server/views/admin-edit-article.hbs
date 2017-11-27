@@ -36,7 +36,7 @@
                                 <h4>{{this.fullContent}}</h4>
                         </td>
                         <td class="text-center align-middle">
-                                <h4>{{this.visible}}</h4>
+                                <h4>{{#if this.visible}}T{{else}}F{{/if}}</h4>
                         </td>
                         <td class="text-center align-middle">
                                 <a href="edit/{{this._id}}">
@@ -72,7 +72,7 @@
                                 </h4>
                         </td>
                         <td class="text-center align-middle">
-                                <h4>{{this.visible}}</h4>
+                                <h4>{{#if this.visible}}T{{else}}F{{/if}}</h4>
                         </td>
                         <td class="text-center align-middle">
                                 <a href="edit/{{this._id}}">
