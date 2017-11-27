@@ -31,6 +31,9 @@ a {
   border-radius:10px;
   
 }
+#deleteIn{
+  width: 220px;
+}
 @media (max-width: 992px){
   #serNavHome {
     background:#d9534f;

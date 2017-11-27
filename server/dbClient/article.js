@@ -7,7 +7,7 @@ const addArticle=(query,callback)=>{
 }
 
 const findArticle=(query,callback)=>{
-    Article.find(query).then(callback);
+    Article.find(query).sort({'order':1}).then(callback);
 }
 const findById=(id,callback)=>{
     Article.findById(id).then(callback);

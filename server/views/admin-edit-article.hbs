@@ -30,7 +30,7 @@
                 {{#each data}} {{#if this.visible}}
                 <tr>
                         <td class="text-center align-middle">
-                                <h4>1</h4>
+                                <h4>{{this.order}}</h4>
                         </td>
                         <td class="text-center align-middle">
                                 <h4>{{this.title}}</h4>
@@ -61,7 +61,7 @@
                 <tr>
                         <td class="text-center align-middle">
                                 <h4>
-                                        <strike>1</strike>
+                                        <strike>{{this.order}}</strike>
                                 </h4>
                         </td>
                         <td class="text-center align-middle">
