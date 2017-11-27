@@ -7,8 +7,8 @@ const categoryDB = require('../../../dbClient/category');
 router.get('/add', (req, res) => {
   const query = req.body;
   callback = (categoryData) => {
-    res.render('admin-add-article',{
-      data:categoryData
+    res.render('admin-add-article', {
+      data: categoryData
     });
   }
 
@@ -72,13 +72,29 @@ router.post('/edit/delete/:articleId', (req, res, next) => {
 router.get('/edit/:articleId', (req, res) => {
   const { articleId } = req.params;
 
-  callback = (data) => {
-    console.log(data)
-    res.render('edit-sigle-article', {
-      data: data
-    });
+  categoryCallback = (categoryData) => {
+    let articleCallback = (articleData) => {
+      
+        let CategorySelected="";     
+       categoryData.map((x)=>{
+        if(x._id.equals(articleData.category)){
+          CategorySelected=x.title;
+        }       
+      })
+
+      console.log(CategorySelected);
+      res.render('edit-sigle-article', {
+        data: articleData,
+        categoryData:categoryData,
+        CategorySelected:CategorySelected
+      });
+    }
+  articleDB.findById(articleId, articleCallback);
   }
-  articleDB.findById(articleId, callback);
+  // articleDB.findById(articleId, callback);
+  categoryDB.findCategory({}, categoryCallback)
+
+
 })
 
 router.post('/edit/:articleId', (req, res) => {
