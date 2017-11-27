@@ -8,11 +8,12 @@
         </div>
     </div>
 
-    <div class="form-group has-success">
-        <label class="text-success">
-            <h3 class="text-primary">Full Content:</h3>
-        </label>
-        <textarea rows="20" class="form-control form-control-success mb-4" id="inputSuccess1" name="fullContent"></textarea>
+    <label class="text-success">
+        <h3 class="text-primary">Full Content:</h3>
+    </label>
+    <div id="whiteBackg" class="form-group has-success">
+
+        <textarea id="mytexta" rows="20" class="form-control form-control-success mb-4" id="inputSuccess1" name="fullContent"></textarea>
     </div>
 
     <div class="form-group row has-success">
@@ -42,7 +43,7 @@
         </div>
     </div>
 
-     <div class="form-group row has-success">
+    <div class="form-group row has-success">
         <label for="example-text-input text-info" class="col-12 col-form-label">
             <h3 class="text-primary">Image:</h3>
         </label>
@@ -60,29 +61,29 @@
         </div>
     </div>
 
-       <div class="form-group row has-success">
+    <div class="form-group row has-success">
         <label for="example-text-input text-info" class="col-12 col-form-label">
             <h3 class="text-primary">ORDER:</h3>
         </label>
         <div class="col-lg-6 col-md-8 col-sm-9 col-xs-9 ">
-            <input class="form-control" type="number" name="order" id="example-text-input" >
+            <input class="form-control" type="number" name="order" id="example-text-input">
         </div>
-         </div>
-
-
-    <div class="form-check">
-      <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="visible" id="optionsRadios1" value="true" checked>
-        <h3>visible</h3>
-      </label>
-    
     </div>
- 
+
+
     <div class="form-check">
-    <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="visible" id="optionsRadios2" value="false">
-        <h3>Hide</h3> 
-       </label>
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="visible" id="optionsRadios1" value="true" checked>
+            <h3>visible</h3>
+        </label>
+
+    </div>
+
+    <div class="form-check">
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="visible" id="optionsRadios2" value="false">
+            <h3>Hide</h3>
+        </label>
     </div>
 
     <input class="btn btn-primary" type="submit" value="Submit">

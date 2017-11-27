@@ -1,51 +1,51 @@
- 
 <form method="post" class="container mt-5">
     <div class="form-group row has-success">
         <label for="example-text-input text-info" class="col-12 col-form-label">
             <h3 class="text-primary">Title:</h3>
         </label>
         <div >
-             <textarea cols="40" name="title">{{data.title}}</textarea>
- 
+            <textarea cols="40" name="title">{{data.title}}</textarea>
+
         </div>
-       
+
     </div>
 
-     
-    
+
+
     {{#if data.visible}}
     <div class="form-check">
-      <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="visible" id="optionsRadios1" value="true" checked>
-        <h3>visible</h3>
-      </label>
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="visible" id="optionsRadios1" value="true" checked>
+            <h3>visible</h3>
+        </label>
     </div>
     <div class="form-check">
-    <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="visible" id="optionsRadios2" value="false" >
-        <h3>Hide</h3> 
-       </label>
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="visible" id="optionsRadios2" value="false">
+            <h3>Hide</h3>
+        </label>
     </div>
-     {{else}}
+    {{else}}
     <div class="form-check">
-      <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="visible" id="optionsRadios1" value="true">
-        <h3>visible</h3>
-      </label>
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="visible" id="optionsRadios1" value="true">
+            <h3>visible</h3>
+        </label>
     </div>
     <div class="form-check">
-    <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="visible" id="optionsRadios2" value="false" checked>
-        <h3>Hide</h3> 
-       </label>
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="visible" id="optionsRadios2" value="false" checked>
+            <h3>Hide</h3>
+        </label>
     </div>
     {{/if}}
 
-    <div class="form-group has-success">
-        <label class="text-success">
-            <h3 class="text-primary">Full Content:</h3>
-        </label>
-        <textarea rows="20"  class="form-control form-control-success mb-4" id="inputSuccess1" name="fullContent">{{data.fullContent}}</textarea>
+    <label class="text-success">
+        <h3 class="text-primary">Full Content:</h3>
+    </label>
+    <div id="whiteBackg" class="form-group has-success">
+
+        <textarea rows="20" class="form-control form-control-success mb-4" id="inputSuccess1" name="fullContent">{{data.fullContent}}</textarea>
     </div>
 
     <div class="form-group row has-success">
@@ -55,7 +55,7 @@
         <div class="col-lg-6 col-md-8 col-sm-9 col-xs-9 ">
             <input class="form-control" type="number" name="order" id="example-text-input" value={{data.order}}>
         </div>
-         </div>
+    </div>
 
 
     <div class="form-group row has-success">
@@ -72,7 +72,7 @@
             <h3 class="text-primary">date:</h3>
         </label>
         <div class="col-lg-6 col-md-8 col-sm-9 col-xs-9 ">
-            <input class="form-control" type="text" name="date" id="example-text-input" value={{data.date}} >
+            <input class="form-control" type="text" name="date" id="example-text-input" value={{data.date}}>
         </div>
     </div>
 
@@ -81,16 +81,16 @@
             <h3 class="text-primary">video:</h3>
         </label>
         <div class="col-lg-6 col-md-8 col-sm-9 col-xs-9 ">
-            <input class="form-control" type="text" name="video" id="example-text-input" value={{data.video}} >
+            <input class="form-control" type="text" name="video" id="example-text-input" value={{data.video}}>
         </div>
     </div>
 
-     <div class="form-group row has-success">
+    <div class="form-group row has-success">
         <label for="example-text-input text-info" class="col-12 col-form-label">
             <h3 class="text-primary">Image:</h3>
         </label>
         <div class="col-lg-6 col-md-8 col-sm-9 col-xs-9 ">
-            <input class="form-control" type="text"  name="image" id="example-text-input" value={{data.image}} >
+            <input class="form-control" type="text" name="image" id="example-text-input" value={{data.image}}>
         </div>
     </div>
 
@@ -99,7 +99,7 @@
             <h3 class="text-primary">ArticleType:</h3>
         </label>
         <div class="col-lg-6 col-md-8 col-sm-9 col-xs-9 ">
-            <input class="form-control" type="text"name="articleType" id="example-text-input"  value={{data.articleType}}>
+            <input class="form-control" type="text" name="articleType" id="example-text-input" value={{data.articleType}}>
         </div>
     </div>
 

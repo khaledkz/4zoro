@@ -1,13 +1,15 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color:rgb(163, 159, 159)!important;
+  background-color:rgb(219, 216, 201)!important;
 }
-
+#whiteBackg{
+  background-color: white;
+}
 a {
   color: #00B7FF;
 }
-
+ 
 .serverNavbar li{
   border-left: solid 2px rgb(255, 255, 255); 
   padding: 5px
