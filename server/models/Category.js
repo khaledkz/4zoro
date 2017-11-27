@@ -10,7 +10,8 @@ const schema=new Schema({
     visible:{
         type:Boolean,
         default:true
-    }
+    },
+    order:Number
 });
 
 const Category= mongoose.model('zorocategory',schema);

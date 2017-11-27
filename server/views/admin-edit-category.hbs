@@ -1,4 +1,4 @@
-<a href="add"><button class="btn btn-success mt-5 mb-3"><h3>Add New Article</h3></button></a>
+<a href="add"><button class="btn btn-success mt-5 mb-3"><h3>Add New Category</h3></button></a>
 
 <table class="table table-bordered table-inverse">
         <thead class="bg-primary thead-bordered">
@@ -16,7 +16,7 @@
                 {{#each data}}
                 {{#if this.visible}}
                 <tr>
-                        <td class="text-center align-middle"><h4>1</h4></td>
+                        <td class="text-center align-middle"><h4>{{this.order}}</h4></td>
                         <td class="text-center align-middle"><h4>{{this.title}}</h4></td>
                         <td class="text-center align-middle"><h4>{{this.shortDescription}}</h4></td>
                         <td class="text-center align-middle"><h4>{{this.visible}}</h4></td>
@@ -35,7 +35,7 @@
                 </tr>
                 {{else}}
 <tr>
-                        <td class="text-center align-middle"><h4>1</h4></td>
+                        <td class="text-center align-middle"><h4>{{this.order}}</h4></td>
                         <td class="text-center align-middle"><h4><strike>{{this.title}}</strike></h4></td>
                         <td class="text-center align-middle"><h4><strike>{{this.shortDescription}}</strike></h4></td>
                         <td class="text-center align-middle"><h4>{{#if this.visible}}T{{else}}F{{/if}}</h4></td>

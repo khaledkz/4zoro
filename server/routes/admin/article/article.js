@@ -35,7 +35,7 @@ router.get('/edit', (req, res, next)=> {
 router.get('/edit/delete/:articleId', (req, res, next)=> {
 
   let {articleId}=req.params;
-
+  
 callback=(data)=>{
    res.render('delete-single-article',{
     data:data
@@ -45,7 +45,7 @@ articleDB.findById(articleId,callback);
 
 });
 router.post('/edit/delete/:articleId',(req,res,next)=>{
-  let {articleId}=req.params;  
+  let {articleId}=req.params; 
    let title=req.body.title;
   let ensureTitle=req.body.ensureTitle;
   if(title==ensureTitle){
@@ -63,6 +63,7 @@ router.get('/edit/:articleId',(req,res)=>{
   const {articleId}=req.params;
 
   callback=(data)=>{
+    console.log(data)
        res.render('edit-sigle-article',{
         data:data
       });
@@ -72,7 +73,8 @@ router.get('/edit/:articleId',(req,res)=>{
 
 router.post('/edit/:articleId',(req,res)=>{
   let query=req.body;
-   
+  console.log(data); 
+  
   const {articleId}=req.params;
 
   callback=()=>{

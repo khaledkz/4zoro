@@ -6,7 +6,7 @@ const addCategory=(query,callback)=>{
     Category.create(query).then(callback);
 }
 const findCategory=(query,callback)=>{
-    Category.find(query).then(callback);
+    Category.find(query).sort({"order":1}).then(callback);
 }
 const findById=(id,callback)=>{
     Category.findById(id).then(callback);
