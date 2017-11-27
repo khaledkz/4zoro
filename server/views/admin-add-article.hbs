@@ -1,12 +1,30 @@
 <form method="post" class="container mt-5">
     <div class="form-group row has-success">
         <label for="example-text-input text-info" class="col-12 col-form-label">
-            <h3 class="text-primary">Title:</h3>
+            <h3 class="text-primary">Article Title</h3>
         </label>
         <div class="col-lg-6 col-md-8 col-sm-9 col-xs-9 ">
             <input class="form-control" type="text" name="title" id="example-text-input">
         </div>
     </div>
+
+      <div class="form-group row has-success">
+        <label for="example-text-input text-info" class="col-12 col-form-label">
+            <h3 class="text-primary">Article Category</h3>
+        </label>
+
+        <select name="category" class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+            
+            <option selected>Choose...</option>
+            {{#each data}}
+             <option value={{this._id}}>{{this.title}}</option>
+
+            {{/each}}
+      
+        </select>
+
+        </div>
+
 
     <label class="text-success">
         <h3 class="text-primary">Full Content:</h3>

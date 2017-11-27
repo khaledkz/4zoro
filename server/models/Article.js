@@ -16,6 +16,10 @@ const schema=new Schema({
         type:Boolean,
         default:true
     },
+    category:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'category'
+    },
     order:Number
 });
 
