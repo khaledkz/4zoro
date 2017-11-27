@@ -28,9 +28,7 @@ a {
 }
 #serNavbar li:hover{
   background: rgb(156, 61, 61);
-  transition: 0.1s all 0.3s;
-  
-   border-radius:10px;
+  border-radius:10px;
   
 }
 @media (max-width: 992px){
