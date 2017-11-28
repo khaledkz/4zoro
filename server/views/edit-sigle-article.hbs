@@ -55,8 +55,24 @@
             {{/each}}
 
         </select>
+
+    </div>
+    <label class="text-success">
+        <h3 class="text-primary">Full Content:</h3>
+    </label>
+    <div id="whiteBackg" class="form-group has-success">
+
+        <textarea rows="20" class="form-control form-control-success mb-4" id="inputSuccess1" name="fullContent">{{data.fullContent}}</textarea>
     </div>
 
+    <div class="showTransitionSection">
+        <h4 class="text-danger">Show/Hide Tranlation section</h4>
+         <button id="showBtn" class="btn btn-success"type="button">+/-</button>
+    </div>
+
+ 
+
+    <div id="transitionSection"> 
     <label class="text-success">
         <h3 class="text-primary">Arabic:</h3>
     </label>
@@ -77,18 +93,10 @@
         <h3 class="text-primary">amargine:</h3>
     </label>
     <div id="whiteBackg" class="form-group has-success">
-
-        <textarea id="mytexta" rows="20" class="form-control form-control-success mb-4" id="inputSuccess1" name="amagrine">{{data.translate.amargine}}</textarea>
+        <textarea id="mytexta" rows="20" class="form-control form-control-success mb-4" id="inputSuccess1" name="amagrine">{{data.translate.amagrine}}</textarea>
     </div>
-
-    <label class="text-success">
-        <h3 class="text-primary">Full Content:</h3>
-    </label>
-    <div id="whiteBackg" class="form-group has-success">
-
-        <textarea rows="20" class="form-control form-control-success mb-4" id="inputSuccess1" name="fullContent">{{data.fullContent}}</textarea>
     </div>
-
+    
     <div class="form-group row has-success">
         <label for="example-text-input text-info" class="col-12 col-form-label">
             <h3 class="text-primary">ORDER:</h3>

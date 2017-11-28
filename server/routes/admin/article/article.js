@@ -11,19 +11,18 @@ router.get('/add', (req, res) => {
       data: categoryData
     });
   }
-
   categoryDB.findCategory({}, callback)
 })
 
 
 router.post('/add', (req, res) => {
   const query = req.body;
-  let translate={'arabic':'','english':'','amargine':''};
-  
-translate.arabic=query.arabic;
-translate.english=query.english;
-translate.amagrine=query.amagrine;
-query.translate=translate;
+  let translate = { 'arabic': '', 'english': '', 'amargine': '' };
+
+  translate.arabic = query.arabic;
+  translate.english = query.english;
+  translate.amagrine = query.amagrine;
+  query.translate = translate;
 
   callback = () => {
     res.redirect('/admin/articles/edit')
@@ -81,22 +80,22 @@ router.get('/edit/:articleId', (req, res) => {
 
   categoryCallback = (categoryData) => {
     let articleCallback = (articleData) => {
-      
-        let CategorySelected="";     
-       categoryData.map((x)=>{
-        if(x._id.equals(articleData.category)){
-          CategorySelected=x.title;
-        }       
+
+      let CategorySelected = "";
+      categoryData.map((x) => {
+        if (x._id.equals(articleData.category)) {
+          CategorySelected = x.title;
+        }
       })
 
       console.log(CategorySelected);
       res.render('edit-sigle-article', {
         data: articleData,
-        categoryData:categoryData,
-        CategorySelected:CategorySelected
+        categoryData: categoryData,
+        CategorySelected: CategorySelected
       });
     }
-  articleDB.findById(articleId, articleCallback);
+    articleDB.findById(articleId, articleCallback);
   }
   // articleDB.findById(articleId, callback);
   categoryDB.findCategory({}, categoryCallback)
