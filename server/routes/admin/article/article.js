@@ -17,12 +17,19 @@ router.get('/add', (req, res) => {
 
 router.post('/add', (req, res) => {
   const query = req.body;
-  let translate = { 'arabic': '', 'english': '', 'amargine': '' };
-
-  translate.arabic = query.arabic;
-  translate.english = query.english;
-  translate.amagrine = query.amagrine;
-  query.translate = translate;
+  let translate = {};  
+ 
+  if(query.arabic.length>0){
+    translate.arabic = query.arabic; 
+  }
+  if(query.english.length>0){
+    translate.english = query.english; 
+  }
+  if(query.amagrine.length>0){
+    translate.amagrine = query.amagrine; 
+  }
+ 
+   query.translate = translate;
 
   callback = () => {
     res.redirect('/admin/articles/edit')
@@ -64,7 +71,7 @@ router.post('/edit/delete/:articleId', (req, res, next) => {
   let { articleId } = req.params;
   let title = req.body.title;
   let ensureTitle = req.body.ensureTitle;
-  if (title == ensureTitle) {
+  if (title === ensureTitle) {
     callback = () => {
       res.redirect('/admin/articles/edit')
     }
