@@ -60,19 +60,15 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
     crossorigin="anonymous"></script>
   <script>
-   var x= document.getElementById('transitionSection');
-   x.style.display="none"
-
-   var z =document.getElementById('showBtn');
-   z.addEventListener('click',()=>{
-     if(x.style.display=="none"){
-        x.style.display="block"
-
+   var transition= document.getElementById('transitionSection');
+   transition.style.display="none";
+   var showButton =document.getElementById('showBtn');
+   showButton.addEventListener('click',()=>{
+     if(transition.style.display=="none"){
+        transition.style.display="block";
      }else{
-               x.style.display="none"
-
+               transition.style.display="none";
      }
-
    })
   </script>
 </body>
