@@ -20,6 +20,14 @@ const schema=new Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'category'
     },
+    
+     language:String,
+       translate:{
+           arabic:String,
+           english:String,
+           amagrine:String
+           
+       },
     order:Number
 });
 

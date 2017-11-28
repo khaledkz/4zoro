@@ -3,7 +3,7 @@
         <label for="example-text-input text-info" class="col-12 col-form-label">
             <h3 class="text-primary">Title:</h3>
         </label>
-        <div >
+        <div>
             <textarea cols="40" name="title">{{data.title}}</textarea>
 
         </div>
@@ -41,22 +41,45 @@
     {{/if}}
 
 
-<div class="form-group row has-success">
+    <div class="form-group row has-success">
         <label for="example-text-input text-info" class="col-12 col-form-label">
             <h3 class="text-primary">Article Category</h3>
         </label>
-    <select name="category" class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
-            
-            <option  value={{data._id}} selected>{{CategorySelected}}</option>
+        <select name="category" class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+
+            <option value={{data._id}} selected>{{CategorySelected}}</option>
 
             {{#each categoryData}}
-             <option value={{this._id}}>{{this.title}}</option>
+            <option value={{this._id}}>{{this.title}}</option>
 
             {{/each}}
-      
-        </select>
-        </div>
 
+        </select>
+    </div>
+
+    <label class="text-success">
+        <h3 class="text-primary">Arabic:</h3>
+    </label>
+    <div id="whiteBackg" class="form-group has-success">
+
+        <textarea id="mytexta" rows="20" class="form-control form-control-success mb-4" id="inputSuccess1" name="arabic">{{data.translate.arabic}}</textarea>
+    </div>
+
+    <label class="text-success">
+        <h3 class="text-primary">English:</h3>
+    </label>
+    <div id="whiteBackg" class="form-group has-success">
+
+        <textarea id="mytexta" rows="20" class="form-control form-control-success mb-4" id="inputSuccess1" name="english">{{data.translate.english}}</textarea>
+    </div>
+
+    <label class="text-success">
+        <h3 class="text-primary">amargine:</h3>
+    </label>
+    <div id="whiteBackg" class="form-group has-success">
+
+        <textarea id="mytexta" rows="20" class="form-control form-control-success mb-4" id="inputSuccess1" name="amagrine">{{data.translate.amargine}}</textarea>
+    </div>
 
     <label class="text-success">
         <h3 class="text-primary">Full Content:</h3>

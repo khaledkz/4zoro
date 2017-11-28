@@ -18,6 +18,13 @@ router.get('/add', (req, res) => {
 
 router.post('/add', (req, res) => {
   const query = req.body;
+  let translate={'arabic':'','english':'','amargine':''};
+  
+translate.arabic=query.arabic;
+translate.english=query.english;
+translate.amagrine=query.amagrine;
+query.translate=translate;
+
   callback = () => {
     res.redirect('/admin/articles/edit')
   }
