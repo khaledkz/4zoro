@@ -3,6 +3,11 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color:rgb(219, 216, 201)!important;
 }
+.showTransitionSection{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 #whiteBackg{
   background-color: white;
 }
