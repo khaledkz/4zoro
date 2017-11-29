@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import apiClient from '../../apiClient/apiClient'
-import categoryCard from './categoryCard'
+import CategoryCard from './categoryCard'
+
 class Categories extends Component {
 
     constructor() {
@@ -25,7 +26,7 @@ class Categories extends Component {
             <div>
                 {this.state.categories.map((x) => {
                     return (
-                        <categoryCard   name={x.title} description={x.shortDescription} />                        
+                        <CategoryCard   name={x.title} description={x.shortDescription} />                        
                         )
                 })}
             </div>
