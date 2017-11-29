@@ -3,7 +3,7 @@ import logo from '../../logo.svg';
 import './App.css';
 import Menu from '../../components/menu/menu'
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Categories from '../../components/category/categoryCard'
+import Categories from '../../components/category/category'
 
 class App extends Component {
   render() {
