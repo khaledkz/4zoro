@@ -17,19 +17,19 @@ router.get('/add', (req, res) => {
 
 router.post('/add', (req, res) => {
   const query = req.body;
-  let translate = {};  
- 
-  if(query.arabic.length>0){
-    translate.arabic = query.arabic; 
+  let translate = {};
+
+  if (query.arabic.length > 0) {
+    translate.arabic = query.arabic;
   }
-  if(query.english.length>0){
-    translate.english = query.english; 
+  if (query.english.length > 0) {
+    translate.english = query.english;
   }
-  if(query.amagrine.length>0){
-    translate.amagrine = query.amagrine; 
+  if (query.amagrine.length > 0) {
+    translate.amagrine = query.amagrine;
   }
- 
-   query.translate = translate;
+
+  query.translate = translate;
 
   callback = () => {
     res.redirect('/admin/articles/edit')

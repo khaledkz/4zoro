@@ -5,10 +5,10 @@ const apiClient = {
     getCategories: () => {
         return axios.get(`${apiUrl}/api/categories`);
     },
-    getSingleCategorey:(categoryId)=>{
+    getSingleCategorey: (categoryId) => {
         return axios.get(`${apiUrl}/api/categories/${categoryId}`);
-        
+
     }
 }
- 
+
 export default apiClient;

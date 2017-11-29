@@ -35,7 +35,7 @@ router.get('/edit/:categoryId', (req, res, next) => {
   let { categoryId } = req.params;
 
   callback = (data) => {
-     res.render('edit-single-category', {
+    res.render('edit-single-category', {
       data: data
     });
   }
@@ -59,26 +59,26 @@ router.get('/edit/delete/:categoryId', (req, res, next) => {
   //   res.redirect('/admin/categories/edit');
   // }
   // categoryDB.removeCategory(categoryId, callback)
-    callback = (data) => {
-       res.render('delete-single-category',{data});
-    }
-    categoryDB.findById(categoryId, callback);
+  callback = (data) => {
+    res.render('delete-single-category', { data });
+  }
+  categoryDB.findById(categoryId, callback);
 
 });
 
 router.post('/edit/delete/:categoryId', (req, res, next) => {
   const { categoryId } = req.params;
-  let title=req.body.title;
-  let ensureTitle=req.body.ensureTitle;
-  if(title==ensureTitle){
+  let title = req.body.title;
+  let ensureTitle = req.body.ensureTitle;
+  if (title == ensureTitle) {
     callback = () => {
       res.redirect('/admin/categories/edit');
     }
     categoryDB.removeCategory(categoryId, callback)
-  }else{
+  } else {
     res.render('sorry-wrong-info')
   }
- 
-   
+
+
 });
 module.exports = router;

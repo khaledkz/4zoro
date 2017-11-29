@@ -15,36 +15,43 @@
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a id="serNavHome"class="navbar-brand text-white" href="/"><h2>Home</h2></a>
+    <a id="serNavHome" class="navbar-brand text-white" href="/">
+      <h2>Home</h2>
+    </a>
 
     <div class="collapse navbar-collapse serverNavbar" id="navbarSupportedContent">
       <ul id="serNavbar" class="navbar-nav mr-auto">
-        
+
         <li class="nav-item active">
-          <a class="nav-link text-white" href="/admin/articles/edit"><h4>Articles</h4>
-          </a>
-        </li>
-        
-        <li class="nav-item active">
-          <a class="nav-link text-white" href="/admin/articles/add"><h4>Add Articles</h4>
+          <a class="nav-link text-white" href="/admin/articles/edit">
+            <h4>Articles</h4>
           </a>
         </li>
 
         <li class="nav-item active">
-          <a class="nav-link text-white" href="/admin/categories/edit"><h4>Categories</h4>
+          <a class="nav-link text-white" href="/admin/articles/add">
+            <h4>Add Articles</h4>
           </a>
         </li>
 
         <li class="nav-item active">
-          <a class="nav-link text-white" href="/admin/categories/add"><h4>Add Categories</h4>
+          <a class="nav-link text-white" href="/admin/categories/edit">
+            <h4>Categories</h4>
           </a>
         </li>
 
         <li class="nav-item active">
-          <a class="nav-link text-white" href="/"><h4>Register</h4>
+          <a class="nav-link text-white" href="/admin/categories/add">
+            <h4>Add Categories</h4>
           </a>
         </li>
-        
+
+        <li class="nav-item active">
+          <a class="nav-link text-white" href="/">
+            <h4>Register</h4>
+          </a>
+        </li>
+
       </ul>
 
       <form class="form-inline my-2 my-lg-0">
@@ -60,16 +67,16 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
     crossorigin="anonymous"></script>
   <script>
-   var transition= document.getElementById('transitionSection');
-   transition.style.display="none";
-   var showButton =document.getElementById('showBtn');
-   showButton.addEventListener('click',()=>{
-     if(transition.style.display=="none"){
-        transition.style.display="block";
-     }else{
-               transition.style.display="none";
-     }
-   })
+    var transition = document.getElementById('transitionSection');
+    transition.style.display = "none";
+    var showButton = document.getElementById('showBtn');
+    showButton.addEventListener('click', () => {
+      if (transition.style.display == "none") {
+        transition.style.display = "block";
+      } else {
+        transition.style.display = "none";
+      }
+    })
   </script>
 </body>
 
