@@ -12,8 +12,7 @@ class CategoryCard extends Component {
                 <Card>
                     <CardImg top width="20" src="http://buttons.studiomarimo.com/order/button_op-zoro.png" alt="Card image cap" />
                          <CardTitle>{this.props.title}</CardTitle>
-                         <CardText>{this.props.description}</CardText>
-                  </Card>
+                   </Card>
             </div>
     );
     }
