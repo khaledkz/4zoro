@@ -10,8 +10,8 @@ class CategoryCard extends Component {
         return (
             <div className="categorySingleCard container">
                 <Card>
-                    <CardImg top width="20" src="http://buttons.studiomarimo.com/order/button_op-zoro.png" alt="Card image cap" />
-                         <CardTitle>{this.props.title}</CardTitle>
+                    <a ><CardImg top width="20" src="http://buttons.studiomarimo.com/order/button_op-zoro.png" alt="Card image cap" /></a>
+                    <a href={this.props.id}><CardTitle>{this.props.title}</CardTitle></a>
                    </Card>
             </div>
     );
