@@ -23,6 +23,14 @@ h4.card-title{
     font-size:16px;
  }
 
+ #categoryBox#myCard.card div{
+width:100%!important; }
+#categoryBox{
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+ }
+
 
  @media (min-width: 600px){
     .categorySingleCard.container {

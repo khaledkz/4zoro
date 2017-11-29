@@ -1,7 +1,7 @@
 <form method="post" class="container mt-5">
     <label for="example-text-input text-info" class="col-12 col-form-label">
-            <h3 class="text-primary text-danger">WARNING !!! : You Have To  select the Article Category</h3>
-        </label>
+        <h3 class="text-primary text-danger">WARNING !!! : You Have To select the Article Category</h3>
+    </label>
 
     <div class="form-group row has-success">
         <label for="example-text-input text-info" class="col-12 col-form-label">
@@ -12,21 +12,21 @@
         </div>
     </div>
 
-      <div class="form-group row has-success">
+    <div class="form-group row has-success">
         <label for="example-text-input text-info" class="col-12 col-form-label">
             <h3 class="text-primary">Article Category</h3>
         </label>
 
         <select name="category" class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
-            
+
             <option selected>Choose...</option>
             {{#each data}}
-             <option value={{this._id}}>{{this.title}}</option>
+            <option value={{this._id}}>{{this.title}}</option>
             {{/each}}
-      
+
         </select>
 
-        </div>
+    </div>
 
 
     <label class="text-success">
@@ -34,39 +34,39 @@
     </label>
     <div id="whiteBackg" class="form-group has-success">
 
-        <textarea  rows="20" class="form-control form-control-success mb-4" name="fullContent"></textarea>
+        <textarea rows="20" class="form-control form-control-success mb-4" name="fullContent"></textarea>
     </div>
 
     <div class="showTransitionSection">
         <h4 class="text-danger">Show/Hide Tranlation section</h4>
-         <button id="showBtn" class="btn btn-success"type="button">+/-</button>
+        <button id="showBtn" class="btn btn-success" type="button">+/-</button>
     </div>
 
-<div id="transitionSection">
-    <label class="text-success">
-        <h3 class="text-primary">Arabic:</h3>
-    </label>
-    <div id="whiteBackg" class="form-group has-success">
+    <div id="transitionSection">
+        <label class="text-success">
+            <h3 class="text-primary">Arabic:</h3>
+        </label>
+        <div id="whiteBackg" class="form-group has-success">
 
-        <textarea   rows="20" class="form-control form-control-success mb-4" name="arabic"></textarea>
+            <textarea rows="20" class="form-control form-control-success mb-4" name="arabic"></textarea>
+        </div>
+
+        <label class="text-success">
+            <h3 class="text-primary">English:</h3>
+        </label>
+        <div id="whiteBackg" class="form-group has-success">
+
+            <textarea rows="20" class="form-control form-control-success mb-4" name="english"></textarea>
+        </div>
+
+        <label class="text-success">
+            <h3 class="text-primary">amagrine:</h3>
+        </label>
+        <div id="whiteBackg" class="form-group has-success">
+
+            <textarea rows="20" class="form-control form-control-success mb-4" name="amagrine"></textarea>
+        </div>
     </div>
-
-    <label class="text-success">
-        <h3 class="text-primary">English:</h3>
-    </label>
-    <div id="whiteBackg" class="form-group has-success">
-
-        <textarea  rows="20" class="form-control form-control-success mb-4"  name="english"></textarea>
-    </div>
-
-    <label class="text-success">
-        <h3 class="text-primary">amagrine:</h3>
-    </label>
-    <div id="whiteBackg" class="form-group has-success">
-
-        <textarea  rows="20" class="form-control form-control-success mb-4"   name="amagrine"></textarea>
-    </div>
-</div>
     <div class="form-group row has-success">
         <label for="example-text-input text-info" class="col-12 col-form-label">
             <h3 class="text-primary">Publisher:</h3>

@@ -12,7 +12,7 @@ class Categories extends Component {
     }
 
     componentDidMount() {
-         apiClient.getCategories()
+        apiClient.getCategories()
             .then(({ data }) => {
                 this.setState({
                     categories: data
@@ -23,14 +23,14 @@ class Categories extends Component {
 
     render() {
         return (
-            <div class="categoriesContainer">
+            <div className="categoriesContainer">
                 {this.state.categories.map((x) => {
                     return (
-                        <CategoryCard  id={x._id}  title={x.title} description={x.shortDescription} />                        
-                        )
+                        <CategoryCard id={x._id} title={x.title} description={x.shortDescription} />
+                    )
                 })}
             </div>
-    );
+        );
     }
 }
 
