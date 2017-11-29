@@ -1,3 +1,13 @@
 .categorySingleCard .card-img-top{
-    width:30%
+    width:30%;
+}
+
+.categorySingleCard .card{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+border: solid 2px rgb(100, 206, 68)!important;
+margin-top:10px
+
 }
