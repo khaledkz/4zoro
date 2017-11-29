@@ -7,19 +7,23 @@ import Categories from '../../components/category/category';
 import About from '../../components/about/about';
 import Setting from '../setting/setting';
 import Login from '../../components/login/login'
+import SingleCategory from '../../components/category/singleCategory'
+
 class App extends Component {
+   
   render() {
     return (
       
       <Router>
       <div>
         <Menu />
-        
+
         <Route exact path="/" component={Categories} />
         <Route path="/about" component={About} />
         <Route path="/categories" exact component={Menu} /> 
         <Route path="/setting" exact component={Setting} /> 
         <Route path="/login" exact component={Login} /> 
+        <Route path="/:categoryId" exact component={SingleCategory} /> 
 
         {/* <Route path="/articles/:articleId" component={Menu} /> */}
         {/* <Route path="/categories/:categoryId" component={Menu} /> */}
