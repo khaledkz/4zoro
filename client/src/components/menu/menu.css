@@ -1,0 +1,24 @@
+.menuNavigation ul{ 
+    display: flex;
+    flex-direction: row;
+    border: solid 1px red;
+    -webkit-padding-start: 0px;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.menuNavigation  a{
+    list-style: none;
+    background: red;
+    height: 56px;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-left: solid 1px white;
+}
+    
+.menuNavigation img{
+    height: 38px
+}

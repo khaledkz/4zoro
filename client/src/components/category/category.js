@@ -26,7 +26,7 @@ class Categories extends Component {
             <div>
                 {this.state.categories.map((x) => {
                     return (
-                        <CategoryCard   name={x.title} description={x.shortDescription} />                        
+                        <CategoryCard   title={x.title} description={x.shortDescription} />                        
                         )
                 })}
             </div>
