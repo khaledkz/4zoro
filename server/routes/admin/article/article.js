@@ -39,15 +39,15 @@ router.post('/add', (req, res) => {
 
 router.get('/edit', (req, res, next) => {
   callback = (data) => {
-    data.map((x) => {
-      let xWidth = x.fullContent.length;
-      if (xWidth > 90) {
-        x.fullContent = x.fullContent.slice(0, 90) + " ...";
-      } else {
-        x.fullContent = x.fullContent.slice(0, 90);
+    // data.map((x) => {
+    //   let xWidth = x.fullContent.length;
+    //   if (xWidth > 90) {
+    //     x.fullContent = x.fullContent.slice(0, 90) + " ...";
+    //   } else {
+    //     x.fullContent = x.fullContent.slice(0, 90);
 
-      }
-    })
+    //   }
+    // })
     res.render('admin-edit-article', {
       data: data
     });

@@ -41,6 +41,12 @@ a {
 #deleteIn{
   width: 220px;
 }
+
+.article-list-fullContent{
+max-height: 130px;
+overflow: auto;
+}
+
 @media (max-width: 992px){
   #serNavHome {
     background:#d9534f;
