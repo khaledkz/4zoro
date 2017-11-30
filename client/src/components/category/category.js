@@ -17,7 +17,6 @@ class Categories extends Component {
                 this.setState({
                     categories: data
                 })
-                console.log(this.state.categories)
             });
     }
 
@@ -26,7 +25,7 @@ class Categories extends Component {
             <div className="categoriesContainer">
                 {this.state.categories.map((x) => {
                     return (
-                        <CategoryCard id={x._id} title={x.title} description={x.shortDescription} />
+                        <CategoryCard id={`/category/${x._id}`} title={x.title} description={x.shortDescription} />
                     )
                 })}
             </div>

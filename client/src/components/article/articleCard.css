@@ -1,7 +1,7 @@
-.card img{
+.categoriesContainer .card img{
     width:50%
 }
-#myCard.card {
+.categoriesContainer .card {
     width:50%;
      display: flex;
     flex-direction: column;
@@ -9,6 +9,6 @@
     align-items: center;
     padding: 10px;
 }
- #myCard button,h4,h6,img{
+ .categoriesContainer button,.categoriesContainer h4,.categoriesContainer h6,.categoriesContainer img{
     margin: 30px
 }

@@ -23,8 +23,9 @@ h4.card-title{
     font-size:16px;
  }
 
- #categoryBox#myCard.card div{
-width:100%!important; }
+ #categoryBox{
+    width:80%; 
+}
 #categoryBox{
      display: flex;
      flex-direction: row;
@@ -39,4 +40,7 @@ width:100%!important; }
     h4.card-title{
         font-size:22px;
      }     
+     #categoryBox{
+        width:40%; 
+    }
  }

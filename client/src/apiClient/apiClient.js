@@ -7,7 +7,9 @@ const apiClient = {
     },
     getSingleCategorey: (categoryId) => {
         return axios.get(`${apiUrl}/api/categories/${categoryId}`);
-
+    },
+    getSingleArticle:(articleId) =>{
+        return axios.get(`${apiUrl}/api/articles/${articleId}`);
     }
 }
 
