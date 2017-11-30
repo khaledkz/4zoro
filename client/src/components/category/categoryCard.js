@@ -12,7 +12,7 @@ class CategoryCard extends Component {
             <div className="categorySingleCard container">
                 <Card>
                     <a ><CardImg top width="20" src="http://buttons.studiomarimo.com/order/button_op-zoro.png" alt="Card image cap" /></a>
-                    <a href={this.props.id}><CardTitle>{this.props.title}</CardTitle></a>
+                    <CardTitle><a href={this.props.id}>{this.props.title}</a></CardTitle>
                 </Card>
             </div>
         );

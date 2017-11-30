@@ -5,8 +5,9 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Categories from '../../components/category/category';
 import About from '../../components/about/about';
 import Setting from '../setting/setting';
-import Login from '../../components/login/login'
-import CategoryBox from '../../components/category/categoryBox'
+import Login from '../../components/login/login';
+import CategoryBox from '../../components/category/categoryBox';
+import SingleArticleCard from '../../components/article/singleArticleCard';
 
 class App extends Component {
 
@@ -16,16 +17,13 @@ class App extends Component {
       <Router>
         <div>
           <Menu />
-
           <Route exact path="/" component={Categories} />
           <Route path="/about" component={About} />
-          <Route path="/categories" exact component={Menu} />
-          <Route path="/setting" exact component={Setting} />
-          <Route path="/login" exact component={Login} />
-          <Route path="/:categoryId" exact component={CategoryBox} />
-
-          {/* <Route path="/articles/:articleId" component={Menu} /> */}
-          {/* <Route path="/categories/:categoryId" component={Menu} /> */}
+          <Route path="/categories"   component={Menu} />
+          <Route path="/setting"   component={Setting} />
+          <Route path="/login"   component={Login} />
+          <Route path="/category/:categoryId"   component={CategoryBox} />
+          <Route path="/article/:articleId"   component={SingleArticleCard} />
         </div>
       </Router>
 

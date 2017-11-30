@@ -26,7 +26,7 @@ class SingleCategory extends Component {
 
             return (
                 this.state.articles.map((x, i) => {
-                    return <ArticleCard key={i} img={x.image} date={x.date} id={x._id} publisherName={x.publisherName} title={x.title} />
+                    return <ArticleCard key={i} img={x.image} date={x.date} id={`/article/${x._id}`} publisherName={x.publisherName} title={x.title} />
                 })
             );
         } else {

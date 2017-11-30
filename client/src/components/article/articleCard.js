@@ -7,9 +7,8 @@ import './articleCard.css'
 const ArticleCard = (props) => {
     return (
 
-        <Card id="myCard">
+        <Card id="articleCard">
             <CardImg top width="30%" src={props.img} alt="Card image cap" />
-
             <CardTitle>{props.title}</CardTitle>
             <CardSubtitle>{props.publisherName}</CardSubtitle>
             <CardSubtitle>{props.articleType}</CardSubtitle>

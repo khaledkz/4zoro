@@ -9,4 +9,14 @@ router.get('/', (req, res) => {
     }
     articleDB.findArticle({ visible: true }, callback);
 })
+
+router.get('/:articleId', (req, res) => {
+    let { articleId } = req.params;
+
+    callback = (data) => {
+        res.json(data);
+    }
+    articleDB.findById(articleId, callback);
+})
+
 module.exports = router;
