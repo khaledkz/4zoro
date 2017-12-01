@@ -1,8 +1,8 @@
 .categoriesContainer .card img{
-    width:50%
+    width:70%
 }
 .categoriesContainer .card {
-    width:50%;
+    width:100%;
      display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -11,4 +11,46 @@
 }
  .categoriesContainer button,.categoriesContainer h4,.categoriesContainer h6,.categoriesContainer img{
     margin: 30px
+}
+.articleBox .articleBox-right img{
+    max-width: 300px
+}
+.articleBox .articleBox-left img{
+    max-width: 150px;
+}
+.articleBox-left{
+    border: solid 1px rgb(151, 151, 158);
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.articleBox-right{
+    border: solid 1px rgb(151, 151, 158);
+    padding: 30px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    
+}
+.articleBox{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin: auto;
+    margin-top:10px;
+    max-width:560px ;    
+ }
+ #categoryBox{
+    width:100%;
+    margin: auto;
+}
+ @media (min-width: 800px){
+    
+ #categoryBox{
+     width:50%;
+     margin: auto;
+ }
 }
