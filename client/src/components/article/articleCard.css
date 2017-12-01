@@ -47,6 +47,14 @@
     width:100%;
     margin: auto;
 }
+
+#articlePage.container img{
+    max-width: 300px;
+}
+#arabicArticleButton{
+    float: right;
+}
+
  @media (min-width: 800px){
     
  #categoryBox{
