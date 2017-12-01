@@ -25,6 +25,18 @@ class SingleArticleCard extends Component {
             language:'arabic'            
          })
     }
+    englishLanguage=()=>{
+        this.setState({
+            language:''            
+         })
+    }
+
+    amarginLanguage=()=>{
+        this.setState({
+            language:'amargin'            
+         })
+    }
+
 
     render() {
 
@@ -35,21 +47,15 @@ class SingleArticleCard extends Component {
              
             if(this.state.language !==""){
                 if(this.state.language==="arabic"){
-                    console.log("ara")
-                    articleContent=this.state.singleArticle.translate.arabic;
-                    console.log(articleContent )
-                    }else{
-                        console.log("ama")
-                         
+                     articleContent=this.state.singleArticle.translate.arabic;
+                     }else{
+                         console.log(this.state.singleArticle.translate)
                         articleContent=this.state.singleArticle.translate.amagrine;
-                        console.log(articleContent )
-                    }
+                     }
                     
                 }
              else{
-                console.log("two");  
                 console.log(this.state.singleArticle.fullContent);
-
                 articleContent=this.state.singleArticle.fullContent;
                 console.log(articleContent )
                         }
@@ -59,6 +65,10 @@ class SingleArticleCard extends Component {
         if(singleArticle){
             return (
                 <div>
+                   <button onClick={this.englishLanguage} id="englishArticleButton" className="btn btn-info">See The Article in English</button>
+                   <br/> <br/>
+                   <button onClick={this.amarginLanguage} id="amargineArticleButton" className="btn btn-info">See The Article in Amargine</button>
+                   <br/> <br/>
                     <button onClick={this.arabicLanguage} id="arabicArticleButton" className="btn btn-info">مشاهدة المقالة باللغة العربية</button>
                 <div id="articlePage" class="container">
                     <img src={this.state.singleArticle.image}/>
