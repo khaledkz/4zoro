@@ -1,17 +1,4 @@
-.categoriesContainer .card img{
-    width:70%
-}
-.categoriesContainer .card {
-    width:100%;
-     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px;
-}
- .categoriesContainer button,.categoriesContainer h4,.categoriesContainer h6,.categoriesContainer img{
-    margin: 30px
-}
+
 .articleBox .articleBox-right img{
     max-width: 300px
 }
@@ -43,22 +30,11 @@
     margin-top:10px;
     max-width:560px ;    
  }
- #categoryBox{
-    width:100%;
-    margin: auto;
-}
+
 
 #articlePage.container img{
     max-width: 300px;
 }
 #arabicArticleButton{
     float: right;
-}
-
- @media (min-width: 800px){
-    
- #categoryBox{
-     width:50%;
-     margin: auto;
- }
 }

@@ -44,3 +44,31 @@ h4.card-title{
         width:40%; 
     }
  }
+
+
+ .categoriesContainer .card img{
+    width:70%
+}
+.categoriesContainer .card {
+    width:100%;
+     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+ .categoriesContainer button,.categoriesContainer h4,.categoriesContainer h6,.categoriesContainer img{
+    margin: 30px
+}
+ #categoryBox{
+    width:100%;
+    margin: auto;
+}
+
+ @media (min-width: 800px){
+    
+ #categoryBox{
+     width:50%;
+     margin: auto;
+ }
+}
