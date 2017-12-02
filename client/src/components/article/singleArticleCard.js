@@ -67,7 +67,6 @@ class SingleArticleCard extends Component {
                 }
             }
             else {
-                console.log(this.state.singleArticle.fullContent)
                 articleContent = this.state.singleArticle.fullContent;
             }
 
