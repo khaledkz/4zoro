@@ -96,6 +96,7 @@ router.get('/edit/:articleId', (req, res) => {
       })
 
       console.log(CategorySelected);
+      
       res.render('edit-sigle-article', {
         data: articleData,
         categoryData: categoryData,
@@ -112,6 +113,21 @@ router.get('/edit/:articleId', (req, res) => {
 
 router.post('/edit/:articleId', (req, res) => {
   let query = req.body;
+
+  let translate = {};
+  
+    if (query.arabic.length > 0) {
+      translate.arabic = query.arabic;
+    }
+    if (query.english.length > 0) {
+      translate.english = query.english;
+    }
+    if (query.amagrine.length > 0) {
+      translate.amagrine = query.amagrine;
+    }
+  
+    query.translate = translate;
+    
   const { articleId } = req.params;
   callback = () => {
     res.redirect('/admin/articles/edit');
