@@ -4,6 +4,8 @@ import {
     CardTitle
 } from 'reactstrap';
 import './categoryCardStyle.css'
+import { Link } from "react-router-dom";
+
 
 class CategoryCard extends Component {
 
@@ -11,8 +13,8 @@ class CategoryCard extends Component {
         return (
             <div className="categorySingleCard container">
                 <Card>
-                    <a ><CardImg top width="20" src="http://buttons.studiomarimo.com/order/button_op-zoro.png" alt="Card image cap" /></a>
-                    <CardTitle><a href={this.props.id}>{this.props.title}</a></CardTitle>
+                    <CardImg top width="20" src="http://buttons.studiomarimo.com/order/button_op-zoro.png" alt="Card image cap" /> 
+                    <CardTitle><Link to={this.props.id}>{this.props.title}</Link></CardTitle>
                 </Card>
             </div>
         );
