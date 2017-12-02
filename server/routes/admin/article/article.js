@@ -2,14 +2,22 @@ const express = require('express');
 const router = express.Router();
 const articleDB = require('../../../dbClient/article');
 const categoryDB = require('../../../dbClient/category');
+const userDB = require('../../../dbClient/user');
 
 /* GET home page. */
 router.get('/add', (req, res) => {
   const query = req.body;
   callback = (categoryData) => {
+
+  usernameCallBack=(users)=>{
     res.render('admin-add-article', {
-      data: categoryData
-    });
+      data: categoryData,
+      users
+     });
+  }
+   
+  userDB.findUsers({},usernameCallBack)
+  
   }
   categoryDB.findCategory({}, callback)
 })

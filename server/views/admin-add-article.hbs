@@ -29,6 +29,25 @@
     </div>
 
 
+<div class="form-group row has-success">
+        <label for="example-text-input text-info" class="col-12 col-form-label">
+            <h3 class="text-primary">Writer </h3>
+        </label>
+
+        <select name="username" class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+
+            <option selected>Choose...</option>
+            {{#each users}}
+            <option value={{this._id}}>{{this.username}}</option>
+            {{/each}}
+
+        </select>
+
+    </div>
+
+    
+
+
     <label class="text-success">
         <h3 class="text-primary">Full Content:</h3>
     </label>
