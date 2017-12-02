@@ -33,6 +33,8 @@ class SingleArticleCard extends Component {
                     singleArticle: data.data
                 })
             })
+
+            
     }
     arabicLanguage = () => {
         this.setState({

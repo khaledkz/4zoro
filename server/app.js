@@ -9,9 +9,11 @@ const cors = require('cors');
 const index = require('./routes/index');
 const article = require('./routes/admin/article/article');
 const category = require('./routes/admin/category/category');
+const users = require('./routes/admin/users/users');
+
 const articleApi=require('./routes/api/articlesApi')
 const categoryApi=require('./routes/api/categoriesApi')
-
+const usersApi=require('./routes/api/userApi')
 const app = express();
 app.use(cors());
 
@@ -32,7 +34,8 @@ app.use('/admin/articles',article)
 app.use('/admin/categories',category)
 app.use('/api/articles', articleApi);
 app.use('/api/categories', categoryApi);
-
+app.use('/admin/register',users)
+app.use('/api/users',usersApi)
 
 
 // catch 404 and forward to error handler
