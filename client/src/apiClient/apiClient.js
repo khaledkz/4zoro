@@ -10,6 +10,13 @@ const apiClient = {
     },
     getSingleArticle:(articleId) =>{
         return axios.get(`${apiUrl}/api/articles/${articleId}`);
+    }, getUsers:()=>{
+        return axios.get(`${apiUrl}/api/users`);
+        
+    },
+    getUserName:(userId)=>{
+        return axios.get(`${apiUrl}/api/users/${userId}`);
+        
     }
 }
 

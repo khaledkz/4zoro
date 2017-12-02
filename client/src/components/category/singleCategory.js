@@ -7,7 +7,9 @@ class SingleCategory extends Component {
     constructor() {
         super();
         this.state = {
-            articles: []
+            articles: [],
+             user:"",
+             userimage:""
         }
     }
 
@@ -19,14 +21,26 @@ class SingleCategory extends Component {
                     articles: x.data
                 })
             })
+
+            apiClient.getUsers()
+            .then((data)=>{
+                this.setState({
+                    user:data.data[0].username,
+                    userimage:data.data[0].image
+                })
+            })
     }
+  
 
     render() {
+        
+    console.log(this.state.user)
+        
         if (this.state.articles.length > 0) {
 
             return (
                 this.state.articles.map((x, i) => {
-                    return <ArticleCard key={i} img={x.image} date={x.date} id={`/article/${x._id}`} publisherName={x.publisherName} title={x.title} />
+                    return <ArticleCard user={this.state.username} image={this.state.userimage} key={i} img={x.image} date={x.date} id={`/article/${x._id}`} publisherName={x.publisherName} title={x.title} />
                 })
             );
         } else {
