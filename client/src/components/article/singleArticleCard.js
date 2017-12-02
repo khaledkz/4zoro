@@ -60,7 +60,7 @@ class SingleArticleCard extends Component {
 
 
         let translate = []
-        if (this.state.singleArticle.translate != undefined) {
+        if (this.state.singleArticle.translate !== undefined) {
             translate=this.state.singleArticle.translate
         }
 
@@ -95,7 +95,7 @@ class SingleArticleCard extends Component {
                     <br /> <br />
                     <button onClick={this.arabicLanguage} id="arabicArticleButton" className="btn btn-info">مشاهدة المقالة باللغة العربية</button>
                     <div id="articlePage" class="container">
-                        <img src={this.state.singleArticle.image} />
+                        <img alt="" src={this.state.singleArticle.image} />
                         <h1>Title:{this.state.singleArticle.title}</h1>
                         <h6>Date:{this.state.singleArticle.date}</h6>
                         <h3>Puplisher:{this.state.singleArticle.publisherName}</h3>

@@ -23,9 +23,9 @@ class Categories extends Component {
     render() {
         return (
             <div className="categoriesContainer">
-                {this.state.categories.map((x) => {
+                {this.state.categories.map((x,i) => {
                     return (
-                        <CategoryCard id={`/category/${x._id}`} title={x.title} description={x.shortDescription} />
+                        <CategoryCard key={i} id={`/category/${x._id}`} title={x.title} description={x.shortDescription} />
                     )
                 })}
             </div>

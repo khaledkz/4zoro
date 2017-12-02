@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-    Card, CardImg,
-    CardTitle, CardSubtitle, Button
+import { Button
 } from 'reactstrap';
 import './articleCard.css'
 const ArticleCard = (props) => {
@@ -11,14 +9,14 @@ const ArticleCard = (props) => {
          <div  class="articleBox ">
                 <div class="articleBox-left ">
                 <h2>Writer:</h2>
-                <img src={props.img} alt="Card image cap" />
+                <img src={props.img} alt="Card-cap" />
                 <h3>{props.publisherName}</h3>
                 <h3>{props.date}</h3>
                 </div>
 
                 <div class="articleBox-right ">
                 <h2>Article:</h2>
-                <img src={props.img} alt="Card image cap" />
+                <img src={props.img} alt="Card-cap" />
                 <h1>{props.title}</h1>
                 <h3>{props.publisherName}</h3>
                 <h4>{props.articleType}</h4>
