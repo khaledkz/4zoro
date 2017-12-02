@@ -34,13 +34,12 @@ class SingleCategory extends Component {
 
     render() {
         
-    console.log(this.state.user)
-        
+         
         if (this.state.articles.length > 0) {
 
             return (
                 this.state.articles.map((x, i) => {
-                    return <ArticleCard user={this.state.username} image={this.state.userimage} key={i} img={x.image} date={x.date} id={`/article/${x._id}`} publisherName={x.publisherName} title={x.title} />
+                    return <ArticleCard user={this.state.user} image={this.state.userimage} key={i} img={x.image} date={x.date} id={`/article/${x._id}`} publisherName={x.publisherName} title={x.title} />
                 })
             );
         } else {

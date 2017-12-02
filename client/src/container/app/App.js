@@ -15,8 +15,9 @@ class App extends Component {
     return (
 
       <Router>
+        
         <div>
-          <Menu />
+        <Menu />
           <Route exact path="/" component={Categories} />
           <Route path="/about" component={About} />
           <Route path="/categories"   component={Menu} />
@@ -25,6 +26,7 @@ class App extends Component {
           <Route path="/category/:categoryId"   component={CategoryBox} />
           <Route path="/article/:articleId"   component={SingleArticleCard} />
         </div>
+        
       </Router>
 
     );

@@ -34,10 +34,7 @@ class SingleArticleCard extends Component {
                 })
             })
 
-            apiClient.getUsers()
-            .then((data)=>{
-                console.log("Users")
-            })
+            
     }
     arabicLanguage = () => {
         this.setState({
