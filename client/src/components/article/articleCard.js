@@ -2,6 +2,8 @@ import React from 'react';
 import { Button
 } from 'reactstrap';
 import './articleCard.css'
+ import { Link } from "react-router-dom";
+
 const ArticleCard = (props) => {
     return (
 
@@ -20,7 +22,7 @@ const ArticleCard = (props) => {
                 <h1>{props.title}</h1>
                 <h3>{props.publisherName}</h3>
                 <h4>{props.articleType}</h4>
-                <a href={props.id}><Button>View Article</Button></a>
+                <Link to={props.id}><Button>View Article</Button></Link>
                 </div>
          </div>  
      );
