@@ -20,6 +20,10 @@ const schema = new Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'category'
     },
+    username:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref:'usernausme'
+    },
 
     language: String,
     translate: {
