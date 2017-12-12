@@ -5,15 +5,16 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-
 const index = require('./routes/index');
 const article = require('./routes/admin/article/article');
 const category = require('./routes/admin/category/category');
-const users = require('./routes/admin/users/users');
-
-const articleApi=require('./routes/api/articlesApi')
+ const articleApi=require('./routes/api/articlesApi')
 const categoryApi=require('./routes/api/categoriesApi')
 const usersApi=require('./routes/api/userApi')
+const login =require('./routes/admin/authentication/login')
+const logout =require('./routes/admin/authentication/logout')
+const register =require('./routes/admin/authentication/register')
+
 const app = express();
 app.use(cors());
 
@@ -28,15 +29,16 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
 app.use('/', index);
 app.use('/admin/articles',article)
 app.use('/admin/categories',category)
 app.use('/api/articles', articleApi);
 app.use('/api/categories', categoryApi);
-app.use('/admin/register',users)
-app.use('/api/users',usersApi)
-
+ app.use('/api/users',usersApi)
+app.use('/admin/login',login)
+app.use('/admin/logout',logout)
+app.use('/admin/register',register)
+  
 
 // catch 404 and forward to error handler
 app.use((req, res, next)=> {
