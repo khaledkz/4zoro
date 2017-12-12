@@ -14,4 +14,4 @@ const findUserById = (id, callback) => {
 } 
 
 
-module.exports = { addUser,findUsers,findUserById };
+module.exports = { addUser,findUsers,findUserById};
