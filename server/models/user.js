@@ -3,6 +3,7 @@ const { Schema } = mongoose;
 
 const schema = new Schema({
      username:String,
+     password:String,
      image:String,
      numberOfArticles:{
          type:Number,
