@@ -104,8 +104,7 @@ router.get('/edit/:articleId', (req, res) => {
         }
       })
 
-      console.log(CategorySelected);
-      
+       
       res.render('edit-sigle-article', {
         data: articleData,
         categoryData: categoryData,

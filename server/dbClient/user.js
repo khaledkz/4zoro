@@ -1,5 +1,5 @@
 require('./connection')
-const UserName = require('../models/UserName');
+const UserName = require('../models/user');
 const ObjectId = require('mongodb').ObjectID;
 
 const addUser = (query, callback) => {
@@ -7,11 +7,11 @@ const addUser = (query, callback) => {
 }
 
 const findUsers= (query, callback) => {
-    UserName.find(query).then(callback);
+    UserName.findOne(query).then(callback);
 }
 const findUserById = (id, callback) => {
     UserName.findById(id).then(callback);
 } 
 
 
-module.exports = { addUser,findUsers,findUserById };
+module.exports = { addUser,findUsers,findUserById};
