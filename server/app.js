@@ -14,6 +14,7 @@ const usersApi=require('./routes/api/userApi')
 const login =require('./routes/admin/authentication/login')
 const logout =require('./routes/admin/authentication/logout')
 const register =require('./routes/admin/authentication/register')
+const users= require('./routes/admin/users/users')
 const passport = require('passport');
 const session = require('express-session');
 const flash = require('connect-flash');
@@ -60,13 +61,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/' ,index);
 app.use('/admin/articles',ensureAuthenticated,article)
 app.use('/admin/categories',ensureAuthenticated,category)
-app.use('/api/articles', ensureAuthenticated,articleApi);
-app.use('/api/categories',ensureAuthenticated, categoryApi);
- app.use('/api/users',ensureAuthenticated,usersApi)
+app.use('/api/articles',articleApi);
+app.use('/api/categories', categoryApi);
+ app.use('/api/users',usersApi)
 app.use('/admin/login',login)
 app.use('/admin/logout',logout)
-app.use('/admin/register',register)
-  
+app.use('/admin/register',ensureAuthenticated,register)
+app.use('/admin/users',users)
 
 // catch 404 and forward to error handler
 app.use((req, res, next)=> {

@@ -4,6 +4,9 @@ const authenticationDB = require("../../../dbClient/authentication/authenticatio
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 
+router.get('/', (req, res) => {
+      res.render('login', { layout: false })
+})
 
 passport.use(new LocalStrategy(
 	(username, password, done) => {
@@ -28,17 +31,13 @@ passport.use(new LocalStrategy(
 		authenticationDB.getUserByUsername(username,passportCallback);
       }));
       
-      passport.serializeUser((user, done) => {  
-            console.log("serialize"+user.id);
-            
+      passport.serializeUser((user, done) => {              
             done(null, user.id);
       });
       
       passport.deserializeUser((id, done) => {
             
-            successCallback=(err, user) => {
-                  console.log("deserialize"+user);
-                  
+            successCallback=(err, user) => {                  
                   done(err, user);
             }
 
@@ -46,9 +45,7 @@ passport.use(new LocalStrategy(
       });
 
 
-router.get('/', (req, res) => {
-      res.render('login', { layout: false })
-})
+
 
 router.post('/',
 passport.authenticate('local', { successRedirect: '/', failureRedirect: '/admin/login', failureFlash: true }),
